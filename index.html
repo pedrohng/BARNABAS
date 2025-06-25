@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Barnabas Aid Australia</title>
+    <!-- Google Fonts: Poppins (for headings), Georgia (for body), Roboto Condensed (for small text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Poppins:wght@600;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <!-- Tailwind CSS CDN for easy styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom styles to ensure better email client compatibility and font */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Georgia', serif; /* Default for longer body text */
             margin: 0;
             padding: 0;
-            background-color: #00C0F3; /* 6F4E7CChanged to purple background */
+            background-color: #00C0F3; /* Confirmed background color */
         }
         /* Ensure images are fluid */
         img {
@@ -71,22 +75,57 @@
             height: 24px;
             vertical-align: middle;
         }
+
+        /* --- Branding Adjustments --- */
+
+        /* Headings large poppins, default semi-bold */
+        h1, h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600; /* Semi-bold */
+        }
+
+        /* Paragraph headings (h3) to be heavier than the body and poppins */
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700; /* Bold, heavier than semi-bold (600) for h1/h2 */
+        }
+
+        /* Longer body text Georgia Pro (using Georgia as widely available). Minimum 10pt for ease of reading */
+        p {
+            font-family: 'Georgia', serif;
+            font-size: 16px; /* Approximately 12pt, ensures ease of reading */
+            line-height: 1.6; /* Enhance readability */
+        }
+        /* Specific rule for paragraphs that were originally smaller (e.g., Mission/Vision/Values) */
+        .content-section p.text-sm,
+        .content-section ul.text-sm li { /* Apply Georgia to list items in this section too */
+            font-size: 14px; /* Keeps the smaller size but applies Georgia */
+            line-height: 1.5;
+        }
+
+        /* Small-text Roboto Condensed with a lighter tint. */
+        /* Applied to footer text and copyright */
+        .footer-small-text {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: normal;
+            color: #71717A; /* A slightly lighter grey (Tailwind gray-500) for "lighter tint" */
+        }
     </style>
 </head>
-<body class="bg-[#00C0F3]"> <!-- Changed to purple background -->
+<body class="bg-[#00C0F3]"> <!-- Confirmed background color via Tailwind class -->
     <div class="max-w-3xl mx-auto py-8 responsive-padding">
         <!-- Header Section - Logo -->
         <div class="text-center mb-8">
-            <!-- Updated with actual logo URL -->
-            <img src="https://assets2.svc.barnabasaid.org/bf-main-site/static/img/assets/logo/barnabas-aid-logo-new.svg" alt="Barnabas Aid Australia Logo" class="mx-auto rounded-lg">
+            <!-- Updated with local logo.png file -->
+            <img src="logo.png" alt="Barnabas Aid Australia Logo" class="mx-auto rounded-lg">
         </div>
 
         <!-- Subject Line / Main Title -->
-        <h1 class="text-3xl md:text-4xl font-bold text-center text-white mb-6 px-4">Discover Barnabas Aid Australia: Standing with the Persecuted Church</h1>
+        <h1 class="text-3xl md:text-4xl text-center text-white mb-6 px-4">Discover Barnabas Aid Australia: Standing with the Persecuted Church</h1>
 
         <!-- Section 1: Opening - Who We Are -->
         <div class="content-section text-center">
-            <h2 class="text-2xl font-semibold text-[#255F85] mb-4">Standing with Our Persecuted Family</h2>
+            <h2 class="text-2xl text-[#255F85] mb-4">Standing with Our Persecuted Family</h2>
             <p class="text-gray-700 leading-relaxed">
                 Barnabas Aid Australia stands with Christian brothers and sisters globally facing persecution. We are their voice, help, and hope, channeling support from Christians to Christians via trusted partners on the ground.
             </p>
@@ -94,18 +133,18 @@
 
         <!-- Section 2: Our Purpose: Mission, Vision, Values -->
         <div class="content-section">
-            <h2 class="text-2xl font-semibold text-[#255F85] mb-4 text-center">Our Purpose</h2>
+            <h2 class="text-2xl text-[#255F85] mb-4 text-center">Our Purpose</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div class="p-4 bg-[#F8F9FA] rounded-lg">
-                    <h3 class="text-xl font-bold text-[#0A2342] mb-2">Mission</h3>
+                    <h3 class="text-xl text-[#0A2342] mb-2">Mission</h3>
                     <p class="text-gray-700 text-sm">To provide material and spiritual support, raise awareness, and advocate for suffering Christians.</p>
                 </div>
                 <div class="p-4 bg-[#F8F9FA] rounded-lg">
-                    <h3 class="text-xl font-bold text-[#0A2342] mb-2">Vision</h3>
+                    <h3 class="text-xl text-[#0A2342] mb-2">Vision</h3>
                     <p class="text-gray-700 text-sm">A strengthened, encouraged persecuted Church maintaining its presence and witness, tackling injustice.</p>
                 </div>
                 <div class="p-4 bg-[#F8F9FA] rounded-lg">
-                    <h3 class="text-xl font-bold text-[#0A2342] mb-2">Values</h3>
+                    <h3 class="text-xl text-[#0A2342] mb-2">Values</h3>
                     <ul class="list-none p-0 m-0 text-gray-700 text-sm space-y-1">
                         <li>Compassion (Galatians 6:10)</li>
                         <li>Prayer</li>
@@ -118,8 +157,7 @@
 
         <!-- Section 3: Our Story -->
         <div class="content-section text-center">
-            <h2 class="text-2xl font-semibold text-[#255F85] mb-4">A Global Reach, A Local Heart</h2>
-            <!-- Updated with actual image URL -->
+            <h2 class="text-2xl text-[#255F85] mb-4">A Global Reach, A Local Heart</h2>
             <img src="https://assets2.svc.barnabasaid.org/bf-main-site/static/img/assets/resources-sign-up.png" alt="Resources Sign Up" class="mx-auto mb-4 rounded-lg">
             <p class="text-gray-700 leading-relaxed">
                 For years, Barnabas Aid has been a lifeline. We send aid, not people, empowering local Christians to build resilience through education, church rebuilding, and livelihood support, while sharing their untold stories and advocating for religious freedom.
@@ -128,7 +166,7 @@
 
         <!-- Section 4: Learn More & Get Involved -->
         <div class="content-section text-center">
-            <h2 class="text-2xl font-semibold text-[#255F85] mb-6">Learn More & Get Involved</h2>
+            <h2 class="text-2xl text-[#255F85] mb-6">Learn More & Get Involved</h2>
             <p class="text-gray-700 mb-6 leading-relaxed">Your prayer and support make a tangible difference. Discover how you can be part of our mission.</p>
             <div class="space-y-4 md:space-y-0 md:space-x-4">
                 <a href="https://www.barnabasaid.org/au/" class="btn btn-primary shadow-lg hover:shadow-xl">Visit Our Website</a>
@@ -140,7 +178,7 @@
 
         <!-- Section 5: Serving Your Church -->
         <div class="content-section text-center">
-            <h2 class="text-2xl font-semibold text-[#255F85] mb-4">Serving Your Church Community</h2>
+            <h2 class="text-2xl text-[#255F85] mb-4">Serving Your Church Community</h2>
             <p class="text-gray-700 leading-relaxed mb-6">
                 We'd be honoured to connect with your pastor or elders to share more about our work. Let's explore how Barnabas Aid Australia can better serve and partner with your church in supporting our persecuted Christian family worldwide.
             </p>
@@ -148,7 +186,7 @@
         </div>
 
         <!-- Footer -->
-        <div class="text-center mt-8 text-gray-600 text-sm">
+        <div class="text-center mt-8 text-sm text-gray-600 footer-small-text">
             <p>Thank you for your interest in Barnabas Aid Australia.</p>
             <div class="mt-4">
                 <!-- Social Media Links - Updated with actual links and simple placeholder icons -->
@@ -162,7 +200,7 @@
                     <img src="https://placehold.co/24x24/FF0000/FFFFFF?text=YT" alt="YouTube" class="inline-block rounded-full">
                 </a>
             </div>
-            <p class="mt-2">&copy; 2025 Barnabas Aid Australia. All rights reserved.</p>
+            <p class="mt-2">© 2025 Barnabas Aid Australia. All rights reserved.</p>
         </div>
     </div>
 </body>
